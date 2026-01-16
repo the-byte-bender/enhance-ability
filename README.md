@@ -1,0 +1,38 @@
+# enhanceAbility
+
+This is a small browser extension I threw together to make D&D Beyond actually usable with a screen reader and keyboard. The name comes from the 2nd-level spell _Enhance Ability_. In D&D, you cast it to give a creature advantage on checks. This extension casts it on _you_, giving you advantage on the Check needed to navigate the app properly!
+
+Ideally, this project shouldn't exist. My dream is for this code to become obsolete because the actual site developers fixed their markup or added these patches directly.
+
+## What it does
+
+The main goal is to stop the site from being a headache to navigate.
+
+-   **Status Shortcuts:**
+    -   For now, we have hp: press `Alt+H` to know your hp from anywhere in the site
+    -   Press `Alt+Shift+H` to jump standard focus straight to the HP adjustment input box so you can heal or take damage immediately.
+
+-   **Table Fixes:**
+    The site likes to use divs that look like tables but aren't tables. This script forces correct grid/table semantics onto spell lists, actions, inventory, and extras so your screen reader can actually understand the rows and columns. Instead of having to arrow down through every column, you can now use your table navigation keys to skim a specific column across all your items!
+
+-   **Sidebar Accessibility :**
+    This is the biggest boost! Normally, if you want to read what a spell or ability actually does, you have to click it, arrow through everything to get to the sidebar (losing your focus), and by the time you're done, you've lost your place in the main list. It's a massive slowdown.
+
+    **enhanceAbility fixes this.** Just Press `Alt+S` to jump straight into the details sidebar when you open something, read what you need, and Press Escape to snap focus instantly back to the exact item you were looking at in the list.
+
+    It finally lets us glance at information. You can pop into the sidebar, check a saving throw DC or damage type, and pop back to the list in a split second without losing your cursor position. It puts us on par with a sighted player who can just look right, then look left.
+
+-   **And More!**
+    I'm the worst when it comes to keeping feature lists up to date, but this is under active development. At the least, expect tons of new status check keys, shortcuts to jump around, etc.
+
+## Contributions
+
+This is very much a work in progress. D&D Beyond is a massive site with a lot of moving parts, and we're just taking off.
+
+If you find a bug, or have an idea for a feature, please open an issue! Better yet, if you know your way around TypeScript and your browsers inspector and devtools, pull requests are extremely welcome. We still have a lot of parts of the site to tackle!
+
+## License
+
+This project is in the public domain.
+
+I feel very strongly about this. To me, accessibility is a fundemental, like air or water. You don't license the air. Even copyleft licenses, which are well-intentioned and I heavily use in my other projects, imply an ownership structure that I don't think applies here. If this code helps you, take it.
