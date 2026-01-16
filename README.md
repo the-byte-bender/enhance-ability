@@ -22,6 +22,11 @@ The main goal is to stop the site from being a headache to navigate.
 
     It finally lets us glance at information. You can pop into the sidebar, check a saving throw DC or damage type, and pop back to the list in a split second without losing your cursor position. It puts us on par with a sighted player who can just look right, then look left.
 
+-   **Dice Toolbar:**
+    Accessing the custom dice roller is now possible. Proper button roles and labels to the dice menu have been added, so you can actually open it. When you click to open the menu, your focus moves right into the dice setup.
+
+    There is also a shortcut: Press `Alt+R` to open the dice menu instantly from anywhere.
+
 -   **And More!**
     I'm the worst when it comes to keeping feature lists up to date, but this is under active development. At the least, expect tons of new status check keys, shortcuts to jump around, etc.
 
