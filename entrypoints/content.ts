@@ -8,6 +8,7 @@ import {
 import { patchComboboxes } from "@/utils/combobox";
 import { initNavEngine } from "@/utils/focusManager";
 import { initSpeech } from "@/utils/speech";
+import { Logger, patchLogInterface as patchLog } from "@/utils/log";
 import { patchDice } from "@/utils/dice";
 import { registerStatusKeys } from "@/utils/status";
 
@@ -17,6 +18,9 @@ export default defineContentScript({
 
     main(ctx) {
         console.log("Enhance Ability: Content script loaded");
+
+        const logger = new Logger();
+
         const runAllPatches = () => {
             patchSpells();
             patchActions();
@@ -24,6 +28,8 @@ export default defineContentScript({
             patchInventory();
             patchDice();
             patchComboboxes();
+            patchLog();
+            logger.subscribe();
         };
 
         console.log("Enhance Ability: Initializing navigation engin");
@@ -42,6 +48,7 @@ export default defineContentScript({
 
         ctx.onInvalidated(() => {
             observer.disconnect();
+            logger.dispose();
         });
 
         console.log("Enhance Ability: Running initial patches");

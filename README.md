@@ -27,6 +27,15 @@ The main goal is to stop the site from being a headache to navigate.
 
     There is also a shortcut: Press `Alt+R` to open the dice menu instantly from anywhere.
 
+-   **Dice Logs:**
+    Screen readers always miss the visual popups when you or someone rolls dice, and the log is very inconvenient to navigate, which makes it hard to stay caught up with the action. This adds a log companion that catches every roll and lets you review them without ever losing focus!
+
+    The results of your own rolls are always automatically announced. Previously, the site would actually re-announce the entire visual history every time a new roll happened because of how the ARIA roles were set up. We've removed those properties since we handle the announcements now.
+
+    Press `Alt+[` or `Alt+]` to move through the history of rolls. Use `Alt+P` to toggle "Live Mode" which controls whether new rolls from others that you can see are announced automatically as they happen.
+
+    The visual log itself is a mess to navigate with screen readers and clutters the page because every single line is there near the bottum of the page, so we've turned it into a dialog role. This lets you skip over the whole thing in browse mode if you aren't interested. If you do want to clear it, just use your screen reader to enter the dialog (that is the `Enter` key with NVDA brows mode) and press the clear button.
+
 -   **Dropdown Fixes:**
     The site is full of dropdowns that claim to be standard Comboboxes but are actually buttons hiding a list of options. This confuses screen readers into switching to Focus / Forms Mode and often getting you stuck. This has been fixed so that you see an expandable button that opens a list of choices below it.
 
