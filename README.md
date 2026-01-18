@@ -32,7 +32,7 @@ The main goal is to stop the site from being a headache to navigate.
 
     The results of your own rolls are always automatically announced. Previously, the site would actually re-announce the entire visual history every time a new roll happened because of how the ARIA roles were set up. We've removed those properties since we handle the announcements now.
 
-    Press `Alt+[` or `Alt+]` to move through the history of rolls. Use `Alt+P` to toggle "Live Mode" which controls whether new rolls from others that you can see are announced automatically as they happen.
+    Press `Alt+[ left bracket` or `Alt+] right bracket` to move through the history of rolls. Use `Alt+P` to toggle "Live Mode" which controls whether new rolls from others that you can see are announced automatically as they happen.
 
     The visual log itself is a mess to navigate with screen readers and clutters the page because every single line is there near the bottum of the page, so we've turned it into a dialog role. This lets you skip over the whole thing in browse mode if you aren't interested. If you do want to clear it, just use your screen reader to enter the dialog (that is the `Enter` key with NVDA brows mode) and press the clear button.
 
