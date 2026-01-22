@@ -5,6 +5,7 @@ import {
     patchExtras,
     patchInventory,
 } from "@/utils/tables";
+import { patchSidebar } from "@/utils/sidebar";
 import { patchComboboxes } from "@/utils/combobox";
 import { initNavEngine } from "@/utils/focusManager";
 import { initSpeech } from "@/utils/speech";
@@ -26,6 +27,7 @@ export default defineContentScript({
             patchActions();
             patchExtras();
             patchInventory();
+            patchSidebar();
             patchDice();
             patchComboboxes();
             patchLog();

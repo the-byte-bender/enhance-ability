@@ -25,6 +25,8 @@ The main goal is to stop the site from being a headache to navigate.
 
     It finally lets us glance at information. You can pop into the sidebar, check a saving throw DC or damage type, and pop back to the list in a split second without losing your cursor position. It puts us on par with a sighted player who can just look right, then look left.
 
+    We've also patched how the sidebar is actually built. The site used to mark it as a dialog, which meant that clicking some buttons inside would often kick your focus out into space randomly. It's now correctly identified as an aside (landmark), and the alinement / pinning controls now actually tell your screen reader whether they are toggled or not so you can know where the sidebar is, visually.
+
 - **Dice Toolbar:**
   Accessing the custom dice roller is now possible. Proper button roles and labels to the dice menu have been added, so you can actually open it. When you click to open the menu, your focus moves right into the dice setup.
 
